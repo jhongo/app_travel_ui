@@ -15,7 +15,7 @@ class CardPlace extends StatelessWidget {
       child: SizedBox(
         width: size.width,
         height: size.height * 0.25,
-        child:  DecoratedBox(decoration: BoxDecoration(),
+        child:  DecoratedBox(decoration: const BoxDecoration(),
           child: Stack(
             children: [
               CardImage(
@@ -99,7 +99,7 @@ class LinearHeader extends StatelessWidget {
             ),
             ),
             const SizedBox(width: 10.0,),
-            Text(username, style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 13),),
+            Text(username, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 13),),
             const Spacer(),
             const Icon(Icons.bookmark_border_outlined, color: Colors.white, size: 25,),
         ],
@@ -130,14 +130,14 @@ class DetailsCard extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Icon(Icons.favorite_border, color: Colors.indigo,size: 22, ),
-                  Text('$likes', style: TextStyle(fontSize: 13),),
-                  SizedBox(width: 10,),
-                  Icon(Icons.message_outlined, color: Colors.indigo,size: 22, ),
-                  Text('$comments', style: TextStyle(fontSize: 13),),
+                  const Icon(Icons.favorite_border, color: Colors.indigo,size: 22, ),
+                  Text('$likes', style: const TextStyle(fontSize: 13),),
+                  const SizedBox(width: 10,),
+                  const Icon(Icons.message_outlined, color: Colors.indigo,size: 22, ),
+                  Text('$comments', style: const TextStyle(fontSize: 13),),
                 ]),
           )),
-          Spacer(),
+          const Spacer(),
          SizedBox(
             width: 45,
             height: 45,
@@ -146,7 +146,7 @@ class DetailsCard extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10.0),
                 color: Colors.white
               ),
-              child: Center(
+              child: const Center(
                 child: Icon(Icons.share, color: Colors.indigo,),
               ),
           )
@@ -172,8 +172,8 @@ class TextDescription extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text( name!, style: TextStyle(fontWeight: FontWeight.w900, color: Colors.white, fontSize: 20)),
-            Text(description!,style: TextStyle(fontWeight: FontWeight.w600, color: Colors.white), maxLines: 2,)
+            Text( name!, style: const TextStyle(fontWeight: FontWeight.w900, color: Colors.white, fontSize: 20)),
+            Text(description!,style: const TextStyle(fontWeight: FontWeight.w600, color: Colors.white), maxLines: 2,)
           ],
         )
         ),
